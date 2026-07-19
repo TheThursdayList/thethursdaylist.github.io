@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Thursday List — Kids' weekends, sorted</title>
+<meta name="description" content="A free weekly email for Tri-Valley parents. Every Thursday, the best local kids' activities and events across Pleasanton, Dublin, Livermore, San Ramon and Danville — so you can plan the weekend without the hunt." />
+
+<meta property="og:title" content="The Thursday List" />
+<meta property="og:description" content="Kids' weekends, sorted — every Thursday. A free weekly email of local kids' activities for Tri-Valley parents." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://thethursdaylist.com" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --ink: #232649;
+    --ink-soft: #5b5f86;
+    --paper: #f5f4fc;
+    --card: #ffffff;
+    --periwinkle: #6b6fe0;
+    --periwinkle-deep: #4a4dc9;
+    --periwinkle-soft: rgba(107,111,224,.12);
+    --marigold: #f4a62a;
+    --marigold-ink: #9a6206;
+    --line: #e5e3f3;
+    --line-strong: #d4d1ee;
+    --radius: 16px;
+    --shadow: 0 1px 2px rgba(35,38,73,.05), 0 18px 40px -24px rgba(35,38,73,.4);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* highlighter — signature */
+  .mark {
+    background-image: linear-gradient(120deg, rgba(244,166,42,.55), rgba(244,166,42,.55));
+    background-repeat: no-repeat;
+    background-size: 100% 42%;
+    background-position: 0 78%;
+    padding: 0 .06em;
+  }
+
+  header.bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 0 8px;
+  }
+  .brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--ink); }
+  .brand .stamp {
+    font-family: "DM Mono", monospace;
+    font-weight: 700; font-size: 13px; line-height: 1;
+    color: #fff; background: var(--periwinkle-deep);
+    width: 22px; height: 22px; border-radius: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+    align-self: center;
+  }
+  .brand .name {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700; font-size: 20px; letter-spacing: -.01em;
+  }
+  .pill {
+    font-family: "DM Mono", monospace;
+    font-size: 11.5px; font-weight: 400; letter-spacing: .02em;
+    color: var(--periwinkle-deep);
+    border: 1px solid var(--line-strong);
+    background: var(--card);
+    border-radius: 999px; padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 56px; align-items: center;
+    padding: 46px 0 30px;
+  }
+  .eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 12.5px; font-weight: 500; letter-spacing: .04em;
+    text-transform: uppercase; color: var(--periwinkle-deep);
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6.4vw, 66px);
+    line-height: .98; letter-spacing: -.025em;
+    margin: 0 0 20px;
+  }
+  .sub {
+    font-size: 18px; color: var(--ink-soft);
+    max-width: 30em; margin: 0 0 28px;
+  }
+
+  .signup { max-width: 440px; }
+  .signup .label { font-weight: 600; font-size: 14.5px; margin: 0 0 10px; color: var(--ink); }
+  .beehiiv-embed { min-height: 56px; }
+  .beehiiv-embed iframe { max-width: 100%; }
+  form.native { display: flex; gap: 8px; flex-wrap: wrap; }
+  form.native input[type="email"] {
+    flex: 1 1 220px; min-width: 0;
+    font: inherit; font-size: 16px;
+    padding: 14px 16px;
+    border: 1.5px solid var(--line-strong);
+    border-radius: 12px; background: var(--card); color: var(--ink);
+  }
+  form.native input[type="email"]::placeholder { color: #9a9cbb; }
+  form.native input[type="email"]:focus-visible {
+    outline: none; border-color: var(--periwinkle);
+    box-shadow: 0 0 0 3px var(--periwinkle-soft);
+  }
+  .btn {
+    font: inherit; font-weight: 600; font-size: 16px;
+    color: #fff; background: var(--periwinkle-deep);
+    border: none; border-radius: 12px;
+    padding: 14px 22px; cursor: pointer;
+    transition: background .15s ease, transform .15s ease;
+    white-space: nowrap;
+  }
+  .btn:hover { background: #3b3eb0; }
+  .btn:focus-visible { outline: 3px solid var(--periwinkle-soft); outline-offset: 2px; }
+  .btn:active { transform: translateY(1px); }
+  .micro {
+    font-family: "DM Mono", monospace;
+    font-size: 11.5px; color: var(--ink-soft);
+    margin: 12px 0 0;
+  }
+
+  .cardwrap { position: relative; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 26px 26px 22px;
+    transform: rotate(-1.1deg);
+  }
+  .card::before {
+    content: "";
+    position: absolute; top: -9px; left: 34px;
+    width: 60px; height: 18px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+  .card .head {
+    display: flex; align-items: center; gap: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1.5px dashed var(--line-strong);
+  }
+  .datechip {
+    font-family: "DM Mono", monospace;
+    text-align: center; line-height: 1;
+    background: var(--periwinkle-deep); color: #fff;
+    border-radius: 10px; padding: 8px 10px;
+  }
+  .datechip .d1 { display: block; font-size: 10px; letter-spacing: .18em; opacity: .85; }
+  .datechip .d2 { display: block; font-size: 20px; font-weight: 500; margin-top: 3px; }
+  .card .title {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700; font-size: 17px; letter-spacing: -.01em;
+  }
+  .card .title small {
+    display: block; font-family: "Inter", sans-serif; font-weight: 400;
+    font-size: 12.5px; color: var(--ink-soft); letter-spacing: 0;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0 4px; }
+  .chip {
+    font-family: "DM Mono", monospace;
+    font-size: 10.5px; letter-spacing: .04em;
+    color: var(--periwinkle-deep);
+    background: var(--periwinkle-soft);
+    border-radius: 999px; padding: 4px 10px;
+  }
+  ul.items { list-style: none; margin: 6px 0 0; padding: 0; }
+  ul.items li {
+    display: flex; gap: 11px; align-items: flex-start;
+    padding: 9px 0; font-size: 14.5px;
+    border-bottom: 1px solid #efeef8;
+  }
+  ul.items li:last-child { border-bottom: none; }
+  .check {
+    flex: none; width: 18px; height: 18px; margin-top: 2px;
+    border: 1.6px solid var(--periwinkle); border-radius: 5px;
+    color: var(--periwinkle-deep); display: grid; place-items: center;
+    font-size: 12px; font-weight: 700;
+  }
+  ul.items li .when {
+    font-family: "DM Mono", monospace;
+    font-size: 11px; color: var(--ink-soft); display: block; margin-top: 2px;
+  }
+
+  .value { padding: 34px 0 8px; }
+  .value .kicker {
+    font-family: "DM Mono", monospace;
+    font-size: 12px; font-weight: 500; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--ink-soft);
+    margin: 0 0 22px; display: flex; align-items: center; gap: 12px;
+  }
+  .value .kicker::after { content: ""; flex: 1; height: 1px; background: var(--line-strong); }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .cell .n { font-family: "DM Mono", monospace; font-size: 12px; color: var(--periwinkle-deep); }
+  .cell h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 700; font-size: 18px; letter-spacing: -.01em;
+    margin: 8px 0 6px;
+  }
+  .cell p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+
+  .local {
+    margin: 40px 0 0; padding: 20px 24px;
+    background: var(--periwinkle-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    font-size: 15px; text-align: center; color: var(--ink);
+  }
+  footer {
+    margin-top: 40px; padding: 26px 0 44px;
+    border-top: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+    font-size: 13.5px; color: var(--ink-soft);
+  }
+  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+  footer a:hover { border-color: var(--periwinkle); }
+  footer .fbrand { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; color: var(--ink); font-size: 15px; }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes riseCard { from { opacity: 0; transform: translateY(14px) rotate(-1.1deg); } to { opacity: 1; transform: translateY(0) rotate(-1.1deg); } }
+  .hero > div:first-child { animation: rise .6s ease both; }
+  .cardwrap { animation: riseCard .7s ease .12s both; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 34px; }
+    .cardwrap { order: 2; max-width: 460px; }
+    .grid3 { grid-template-columns: 1fr; gap: 18px; }
+    .card { transform: rotate(0deg); }
+    @keyframes riseCard { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <a class="brand" href="/">
+      <span class="stamp">✓</span>
+      <span class="name">The Thursday List</span>
+    </a>
+    <span class="pill">Free · one email a week</span>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">A free weekly email for Tri-Valley parents</p>
+      <h1>Kids' weekends,<br><span class="mark">sorted.</span></h1>
+      <p class="sub">Every Thursday, one short email with the best local kids' activities and events — so you're not digging through library calendars and Facebook groups on Friday night.</p>
+
+      <!-- ============================================================= -->
+      <!--  BEEHIIV SUBSCRIBE FORM (live inline embed)                    -->
+      <!--  To swap in a different form later, replace the <script> tag   -->
+      <!--  below with a new one from Subscribers → Subscribe Forms →     -->
+      <!--  Get embed code. Use the "Slim" layout with Title/Subtitle     -->
+      <!--  toggled off so it matches the label above.                    -->
+      <!-- ============================================================= -->
+      <div class="signup">
+        <p class="label">Get this Thursday's list</p>
+        <div class="beehiiv-embed">
+          <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="71623ba4-6e52-41ad-be3f-816aca8bd325"></script>
+        </div>
+        <p class="micro">Free. One email a week. Unsubscribe anytime.</p>
+      </div>
+      <!-- ===================== END BEEHIIV SLOT ======================= -->
+
+    </div>
+
+    <div class="cardwrap">
+      <div class="card">
+        <div class="head">
+          <span class="datechip"><span class="d1">EVERY</span><span class="d2">THU</span></span>
+          <span class="title">This weekend's picks<small>A sample of what lands in your inbox</small></span>
+        </div>
+        <div class="chips">
+          <span class="chip">AGES 3–10</span>
+          <span class="chip">FREE PICKS</span>
+          <span class="chip">&lt; 15 MIN AWAY</span>
+        </div>
+        <ul class="items">
+          <li><span class="check">✓</span><span>Family math festival — JRMF, Pleasanton <span class="mark">(free)</span><span class="when">SAT · 1:00 PM</span></span></li>
+          <li><span class="check">✓</span><span>Little Hikers meetup — Sycamore Grove, Livermore<span class="when">SUN · 9:00 AM</span></span></li>
+          <li><span class="check">✓</span><span>"Fun on the Farm" — Forest Home Farms, San Ramon <span class="mark">(free)</span><span class="when">SAT · 11 AM–2 PM</span></span></li>
+          <li><span class="check">✓</span><span>Lego club, ages 5–10 — San Ramon Library<span class="when">SUN · 2:00 PM</span></span></li>
+          <li><span class="check">✓</span><span>Splash pad opens for the season — Dublin<span class="when">WEEKENDS · all day</span></span></li>
+          <li><span class="check">✓</span><span>Danville farmers market kids' craft<span class="when">SAT · weekly</span></span></li>
+          <li><span class="check">✓</span><span>Toddler storytime — Pleasanton Library<span class="when">SAT · weekly</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="value">
+    <p class="kicker">What you get</p>
+    <div class="grid3">
+      <div class="cell">
+        <span class="n">01</span>
+        <h3>Only the good stuff</h3>
+        <p>Hand-picked activities for kids roughly 3–10 — storytimes, splash pads, classes, free days and seasonal camps.</p>
+      </div>
+      <div class="cell">
+        <span class="n">02</span>
+        <h3>Every source, one place</h3>
+        <p>Libraries, rec departments, school events and local finds — gathered so you don't have to check ten calendars.</p>
+      </div>
+      <div class="cell">
+        <span class="n">03</span>
+        <h3>Thursday, like clockwork</h3>
+        <p>In your inbox in time to plan the weekend. No app to open, no feed to scroll — just the list.</p>
+      </div>
+    </div>
+  </section>
+
+  <p class="local">Made for families across the Tri-Valley — <strong>Pleasanton, Dublin, Livermore, San Ramon &amp; Danville</strong>.</p>
+
+  <footer>
+    <span class="fbrand">The Thursday List</span>
+    <span>
+      <a href="mailto:hello@thethursdaylist.com">hello@thethursdaylist.com</a>
+      &nbsp;·&nbsp;
+      <a href="https://instagram.com/thethursdaylist">Instagram</a>
+      &nbsp;·&nbsp;
+      <a href="https://facebook.com/thethursdaylist">Facebook</a>
+    </span>
+  </footer>
+
+</div>
+</body>
+</html>
